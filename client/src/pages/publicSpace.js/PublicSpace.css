@@ -1,0 +1,84 @@
+.con{
+    margin: 60px 91px 0 124px;
+}
+.content{
+    margin: 10px 6px 0px -33px;
+    border: solid #ccc;
+}
+.imag{
+    margin: 3px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.button-link {
+    display: inline-block;
+    margin: 34px 0px 0px 0;
+    padding: 10px 10px; 
+    font-size: 16px; 
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff; 
+    color: #fff; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+.button-link:hover {
+    background-color: #0056b3; 
+}
+
+.home-container-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-wrapper1 {
+    max-width: 400%;
+    width: 100%;
+    margin: 40px 138px 0 163px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+   
+}
+
+.select1,
+.textarea1,
+.input1 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.button1 {
+    margin-top: -21px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width:680px) {
+    .con{
+        width: 124%;
+        margin: 0 0 0 -82px;
+    }
+    .addPost-btn{
+        margin:-20px 0 0 -115px;
+    }
+    .pub-form{
+        width: 231%;
+        margin: 0 0 0 -174px;
+    }
+
+}
+

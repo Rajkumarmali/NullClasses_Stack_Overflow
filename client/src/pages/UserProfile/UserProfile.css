@@ -1,0 +1,171 @@
+.user-details-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .user-details {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .user-name {
+    padding-left: 20px;
+  }
+  .user-name p {
+    color: #7e7e7e;
+  }
+  .edit-profile-btn {
+    padding: 8px 10px;
+    border: solid 1px #7e7e7e;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .edit-profile-btn:hover {
+    background-color: #f5f9fc;
+  }
+  .edit-profile-title {
+    padding: 20px 0px;
+    border-bottom: solid 1px #dbd9d9;
+  }
+  .edit-profile-title-2 {
+    color: grey;
+    font-weight: 400;
+  }
+  .edit-profile-form {
+    padding: 20px;
+    border: solid 1px #dbd9d9;
+    border-radius: 5px;
+  }
+  .edit-profile-form label h3 {
+    margin: 0%;
+    padding: 3px 0px;
+  }
+  .edit-profile-form label p {
+    margin: 0%;
+    padding: 3px 0px;
+  }
+  .edit-profile-form label input,
+  .edit-profile-form label textarea {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: solid 1px #dbd9d9;
+    width: 50%;
+  }
+  
+  .user-submit-btn {
+    padding: 14px 10px;
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .user-submit-btn:hover {
+    background-color: #0074cc;
+  }
+  
+  .user-cancel-btn {
+    padding: 14px 10px;
+    color: #0a95ff;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .badge-container {
+    text-align: right;
+    font-weight: bold;
+    margin: 0 -20px -86px 850px;
+}
+.badge-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0px 10px 20px;
+}
+.badge-img {
+  margin-right: 10px;
+}
+.login-btn{
+  display: inline-block;
+  margin: -13px 0px 0px -13px;
+  padding: 10px 10px; 
+  font-size: 16px; 
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff; 
+  color: #fff; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+}
+
+.login-table {
+  width: 113%;
+  border-collapse: collapse;
+  margin: 34px 0px 0 -21px ;
+}
+
+.login-thead {
+  background-color: #f2f2f2;
+}
+
+.login-th, .login-td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.login-th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.login-h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width:680px) {
+  .user-details-container{
+    margin: 32px 0 0 -113px;
+    width: 110%;
+  }
+  .badge-container{
+    margin: 0 0 0 -59px;
+    width: 100%;
+  }
+  .badge-con{
+    display: inline-grid;
+  }
+  .login-table{
+    display: inline-grid;
+    margin: 0 0 0px -122px
+  }
+  .edit-profile-form{
+    margin: 0 0 0 -120px;
+    width: 118%
+  }
+  .edit-profile-title{
+    margin: 0 0 0 -120px;
+    width: 118%
+  }
+  .edit-profile-title-2{
+    margin: 13px 0 13px -121px;
+    width: 118%
+  }
+  .watchTag{
+    margin: 0 0 0 -105px;
+  }
+}
