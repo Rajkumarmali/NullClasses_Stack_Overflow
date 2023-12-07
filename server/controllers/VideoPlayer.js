@@ -33,6 +33,3 @@ export const getvideoPlayerController = async (req, res) => {
         })
     }
 }
-
-//https://www.youtube.com/watch?v=Kw6dEo_Llwg
-//https://www.youtube.com/watch?v=3ja0iBNy8Uc
