@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import LeftSIdeBar from '../../components/leftSideBar/LeftSIdeBar';
 import moment from 'moment';
+import { useParams } from 'react-router-dom';
 
 const LoginInfo = () => {
     const userData = localStorage.getItem('Profile');
     const profileData = JSON.parse(userData);
-    const username = profileData.result.name;
+    // const username = profileData.result.name;
+
+    const { currentUserInfo } = useParams();
+    //  console.log(currentUserInfo);
+
     const [loginHistory, setLoginHistory] = useState([]);
     const [sortedLoginHistory, setSortedLoginHistory] = useState([]);
 
     const fetchLoginHis = async () => {
-        const response = await fetch('http://localhost:3001/user/loginHistory', {
+        const response = await fetch('https://nullclasses-stack-overflow.onrender.com/user/loginHistory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ username }),
+            body: JSON.stringify({ username: currentUserInfo }),
         });
         const data = await response.json();
+        // console.log(data)
         setLoginHistory(data?.loginHistory);
     };
 

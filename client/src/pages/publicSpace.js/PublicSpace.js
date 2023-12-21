@@ -7,7 +7,7 @@ const PublicSpace = () => {
     const [publicSpace, setPublicSpace] = useState();
 
     const fetchPublic = async () => {
-        const response = await fetch('http://localhost:3001/publicSpace/get', {
+        const response = await fetch('https://nullclasses-stack-overflow.onrender.com/publicSpace/get', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

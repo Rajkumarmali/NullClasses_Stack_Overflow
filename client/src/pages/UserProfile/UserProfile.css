@@ -137,7 +137,7 @@ tbody tr:hover {
   text-align: center;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:1024px) {
   .user-details-container{
     margin: 32px 0 0 -113px;
     width: 110%;

@@ -63,7 +63,7 @@
 }
 
 /* Add media query for responsiveness */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1024px) {
     .side-nav-links {
         display: block;
         text-align: left;

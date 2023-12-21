@@ -78,7 +78,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:1024px) {
     .video_con{
         width: 100%;
         margin: 0px 0 0px -119px;

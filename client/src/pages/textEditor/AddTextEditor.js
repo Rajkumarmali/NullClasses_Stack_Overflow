@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LeftSIdeBar from '../../components/leftSideBar/LeftSIdeBar';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const AddTextEditor = () => {
     const [editor, setEditor] = useState('');
@@ -9,16 +10,23 @@ const AddTextEditor = () => {
 
     const navigate = useNavigate();
 
+    const User = useSelector((state) => state.currentUserReducer);
+
     const handleText = async (e) => {
         e.preventDefault();
         // console.log(editor)
         // console.log(code)
         // console.log(video)
+        if (User === null) {
+            alert("Login or Signup to post a question");
+            navigate("/Auth");
+        }
+
         if (!editor || !code || !video) {
             alert('please fill all field')
         } else {
             try {
-                const response = await fetch('http://localhost:3001/textEditor/post', {
+                const response = await fetch('https://nullclasses-stack-overflow.onrender.com/textEditor/post', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

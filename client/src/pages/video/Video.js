@@ -11,7 +11,7 @@ const Video = () => {
 
     const fetchVideos = async () => {
         try {
-            const response = await fetch('http://localhost:3001/video/get', {
+            const response = await fetch('https://nullclasses-stack-overflow.onrender.com/video/get', {
                 method: 'POST',
                 headers: {},
             });

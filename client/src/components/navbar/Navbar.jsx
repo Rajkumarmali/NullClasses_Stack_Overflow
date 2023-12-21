@@ -68,14 +68,13 @@ const Navbar = ({ handleSlideIn }) => {
                 {User === null ?
                     <Link to="/Auth" className='nav-item nav-links'>Log in</Link> :
                     <>
-                        {windowWidth > 680 && (
-                            <Avatar backgroundColor="#009dff" px="10px" py="7px" borderRadius="50%" color="white">
-                                <Link to={`/Users/${User?.result?._id}`} style={{ color: 'white', textDecoration: "none" }}>{User.result.name.charAt(0).toUpperCase()}</Link>
-                            </Avatar>)}
+                        <Avatar backgroundColor="#009dff" px="10px" py="7px" borderRadius="50%" color="white" >
+                            <Link to={`/Users/${User?.result?._id}`} style={{ color: 'white', textDecoration: "none" }}>{User.result.name.charAt(0).toUpperCase()}</Link>
+                        </Avatar>
                         <button className='nav-item nav-links' onClick={handleLogOut}>Log out</button>
                     </>
                 }
-                {windowWidth < 680 && (
+                {windowWidth < 1024 && (
                     <Link className='dropdownIcone' onClick={dropdownMenu}>&#9776;</Link>
                 )}
             </div>

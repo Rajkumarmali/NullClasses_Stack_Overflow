@@ -20,7 +20,7 @@ const QuestionDetail = () => {
     const [Answer, setAnswer] = useState("");
 
     const location = useLocation();
-    const url = "http://localhost:3000";
+    const url = "https://nullclasses-stack-overflow.onrender.com/";
     //console.log(location);
 
     const handlePostAns = (e, answerLength) => {

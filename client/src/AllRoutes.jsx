@@ -29,7 +29,8 @@ const AllRoutes = () => {
             <Route path='/Users/:id' element={<UserProfile />} />
             <Route path='/videoPlayer' element={<Video />} />
             <Route path='/addVideo' element={<AddVideo />} />
-            <Route path='/loginInfo' element={<LoginInfo />} />
+            <Route path='/loginInfo/:currentUserInfo' element={<LoginInfo />} />
+
             <Route path='/publicSpace' element={<PublicSpace />} />
             <Route path='/addPublic' element={<AddPublicSpace />} />
             <Route path='/textEditor' element={<TextEditor />} />

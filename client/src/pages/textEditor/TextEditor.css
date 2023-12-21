@@ -44,10 +44,10 @@
     transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:1024px) {
   .container{
     margin: 0 0 0 -87px;
-    width: 124%;
+    width: 110%;
   }
   .addtext-btn{
     margin: -20px 0 0 -119px

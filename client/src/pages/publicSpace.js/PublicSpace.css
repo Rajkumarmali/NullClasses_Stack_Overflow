@@ -67,9 +67,9 @@
     transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:1024px) {
     .con{
-        width: 124%;
+        width: 110%;
         margin: 0 0 0 -82px;
     }
     .addPost-btn{

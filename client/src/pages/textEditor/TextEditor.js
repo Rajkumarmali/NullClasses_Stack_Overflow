@@ -7,7 +7,7 @@ const TextEditor = () => {
     const [textEditor, setTextEditor] = useState();
     const fetchText = async () => {
         try {
-            const response = await fetch('http://localhost:3001/textEditor/get', {
+            const response = await fetch('https://nullclasses-stack-overflow.onrender.com/textEditor/get', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

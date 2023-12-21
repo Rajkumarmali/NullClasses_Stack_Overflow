@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LeftSIdeBar from '../../components/leftSideBar/LeftSIdeBar';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const AddPublicSpace = () => {
 
@@ -9,16 +10,23 @@ const AddPublicSpace = () => {
     const [type, setType] = useState();
     const navigation = useNavigate();
 
+    const User = useSelector((state) => state.currentUserReducer);
+    //console.log(User)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         //  console.log(content)
         //  console.log(media)
         // console.log(type)
+        if (User === null) {
+            alert("Login or Signup to post a question");
+            navigation("/Auth");
+        }
         if (!content || !media || !type) {
             alert('please fill all field')
         } else {
             try {
-                const response = await fetch('http://localhost:3001/publicSpace/post', {
+                const response = await fetch('https://nullclasses-stack-overflow.onrender.com/publicSpace/post', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

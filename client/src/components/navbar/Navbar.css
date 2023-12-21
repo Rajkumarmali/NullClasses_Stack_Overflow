@@ -84,8 +84,15 @@
     text-decoration: none;
     color: rgb(69, 69, 69);
   }
+  .avtar{
+    background-color:#009dff;
+     px:10px; 
+     py: 7px;
+      borderRadius:50%;
+      color:white;
+  }
   
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1024px) {
     .navbar :not(:nth-child(6)),
     .navbar form {
         display: none;

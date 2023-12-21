@@ -15,7 +15,8 @@ const UserProfile = () => {
     //console.log(id)
     const users = useSelector((state) => state.usersReducer);
     const currentProfile = users.filter((user) => user._id === id)[0];
-    //console.log(currentProfile)
+    const currentUserInfo = currentProfile.name;
+    // console.log(currentUserInfo)
     const [questionNumber, setQuestionNumebr] = useState(0);
     const [answerNumber, setAnswerNumber] = useState();
 
@@ -26,7 +27,7 @@ const UserProfile = () => {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await fetch('http://localhost:3001/question/user-question', {
+                const response = await fetch('https://nullclasses-stack-overflow.onrender.com/question/user-question', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -46,7 +47,7 @@ const UserProfile = () => {
     useEffect(() => {
         const fetchAnswer = async () => {
             try {
-                const response = await fetch('http://localhost:3001/answer/user-answer', {
+                const response = await fetch('https://nullclasses-stack-overflow.onrender.com/answer/user-answer', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -89,9 +90,7 @@ const UserProfile = () => {
                         )}
                     </div>
                     <div className='badge-container'>
-                        {currentUser?.result._id === id && (
-                            <Link className='login-btn' to='/loginInfo'>Login History</Link>
-                        )}
+                        <Link className='login-btn' to={{ pathname: `/loginInfo/${currentUserInfo}`, state: { currentUserInfo } }}>Login History</Link>
                         <h4>Total Points :{(questionNumber || answerNumber) ? (questionNumber * 5) + answerNumber * 10 : "0"}</h4>
                         <h4>Total Badge : {Math.floor((questionNumber * 5 + answerNumber * 10) / 20)}</h4>
 
