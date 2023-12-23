@@ -32,9 +32,8 @@ export const signup = async (req, res) => {
 };
 
 export const login = async (req, res) => {
+    const ipAddress = IP.address();
     const { email, password, browser, OS, deviceType } = req.body;
-    // const { browser, OS, deviceType } = req.body
-
     try {
         const existinguser = await users.findOne({ email });
         if (!existinguser) {
@@ -44,12 +43,10 @@ export const login = async (req, res) => {
         if (!isPasswordCrt) {
             return res.status(400).json({ message: "Invalid credentials" });
         }
-        const ipAddress = IP.address();
         const token = jwt.sign(
             { email: existinguser.email, id: existinguser._id },
             "test",
             { expiresIn: "1h" }
-
         );
         const username = existinguser.name
         const LoginInfo = new LoginInfos({
@@ -57,8 +54,8 @@ export const login = async (req, res) => {
         })
         LoginInfo.save();
         res.status(200).json({ result: existinguser, token });
+        //existinguser.name
     } catch (error) {
-        console.log(error)
         res.status(500).json("Something went worng...");
     }
 }
@@ -74,3 +71,33 @@ export const loginHistory = async (req, res) => {
         res.send("Error")
     }
 }
+
+// const { email, password, browser, OS, deviceType } = req.body;
+//     // const { browser, OS, deviceType } = req.body
+
+//     try {
+//         const existinguser = await users.findOne({ email });
+//         if (!existinguser) {
+//             return res.status(404).json({ message: "User don't Exist." });
+//         }
+//         const isPasswordCrt = await bcrypt.compare(password, existinguser.password);
+//         if (!isPasswordCrt) {
+//             return res.status(400).json({ message: "Invalid credentials" });
+//         }
+//         const ipAddress = IP.address();
+//         const token = jwt.sign(
+//             { email: existinguser.email, id: existinguser._id },
+//             "test",
+//             { expiresIn: "1h" }
+
+//         );
+//         const username = existinguser.name
+//         const LoginInfo = new LoginInfos({
+//             username, browser, OS, deviceType, ipAddress
+//         })
+//         LoginInfo.save();
+//         res.status(200).json({ result: existinguser, token });
+//     } catch (error) {
+//         console.log(error)
+//         res.status(500).json("Something went worng...");
+//     }

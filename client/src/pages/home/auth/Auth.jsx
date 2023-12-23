@@ -15,7 +15,10 @@ const Auth = () => {
     const navigate = useNavigate();
 
     const handleSwitch = () => {
-        setIsSignup(!isSignup)
+        setIsSignup(!isSignup);
+        setName("");
+        setEmail("");
+        setPassword("");
     }
 
     const getOS = () => {
