@@ -56,7 +56,7 @@ const LoginInfo = () => {
                             <th className="login-th">Date & Time</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className = "tbodyy">
                         {sortedLoginHistory.length !== 0 ? (
                             sortedLoginHistory.map((data) => (
                                 <tr key={data._id}>

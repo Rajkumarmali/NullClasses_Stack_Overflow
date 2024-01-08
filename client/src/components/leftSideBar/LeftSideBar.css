@@ -82,8 +82,8 @@
         cursor: pointer;
     }
 .left-sidebar{
-  margin: 0 0 0 -21px;
-  width: 87px;
+  margin:-13px 0 0 -21px;
+  width: 83px;
 }
     .show-dropdown .side-nav-div {
         display: block;
