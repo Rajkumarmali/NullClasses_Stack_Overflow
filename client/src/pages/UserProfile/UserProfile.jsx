@@ -62,7 +62,7 @@ const UserProfile = () => {
             }
         };
         fetchAnswer();
-    }, []);
+    }, [id]);
 
 
     return (
@@ -90,7 +90,10 @@ const UserProfile = () => {
                         )}
                     </div>
                     <div className='badge-container'>
-                        <Link className='login-btn' to={{ pathname: `/loginInfo/${currentUserInfo}`, state: { currentUserInfo } }}>Login History</Link>
+                        {currentUser?.result._id === id && (
+                            <Link className='login-btn' to={{ pathname: `/loginInfo/${currentUserInfo}`, state: { currentUserInfo } }}>Login History</Link>
+                        )}
+
                         <h4>Total Points :{(questionNumber || answerNumber) ? (questionNumber * 5) + answerNumber * 10 : "0"}</h4>
                         <h4>Total Badge : {Math.floor((questionNumber * 5 + answerNumber * 10) / 20)}</h4>
 
